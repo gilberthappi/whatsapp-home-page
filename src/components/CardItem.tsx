@@ -8,7 +8,7 @@ const CardItem = ({ name, lastText, time }: any) => {
     <View style={styles.root}>
       <Avatar.Image
         size={60}
-        source={require("../../../../assets/images/download.png")}
+        source={require("../../assets/images/download.png")}
       />
       <View
     

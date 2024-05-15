@@ -22,8 +22,7 @@ const cardItems = [
   { name: "Happi", lastText: "Hello bro ngwino home", time: "5:27 PM" },
   { name: "Happi", lastText: "Hello bro ngwino home", time: "5:27 PM" },
 
-  { name: "Happi", lastText: "Hello bro ngwino home", time: "5:27 PM" },
-  { name: "Happi", lastText: "Hello bro ngwino home", time: "5:27 PM" },
+
 ];
 
 function Home() {
@@ -56,10 +55,10 @@ function Home() {
           }}
         />
         <Appbar.Action icon="magnify" iconColor="#fff"
-         onPress={() => {console.log('what you are searching for ')}} />
+         onPress={() => {console.log('searching...')}} />
         <Appbar.Action
           icon="dots-vertical"
-          onPress={() => {console.log('what you are searching for ')}}
+          onPress={() => {console.log('menu clicked')}}
           iconColor="#fff"
         />
       </Appbar.Header>
@@ -79,10 +78,10 @@ function Home() {
           }}
         >
           <TabScreen icon="camera" label="">
-            <ExploreWitHookExamples />
+            <View style={{ backgroundColor: "green", flex: 1 }} />
           </TabScreen>
           <TabScreen label="CHATS" badge={33}>
-            <ExploreWitHookExamples />
+            <View style={{ backgroundColor: "blue", flex: 1 }} />
           </TabScreen>
           <TabScreen label="STATUS">
             <View style={{ backgroundColor: "black", flex: 1 }} />
@@ -102,7 +101,7 @@ function Home() {
       <FAB
          style={styles.fab}
          small
-         icon="message-plus"
+         icon="message-reply-text"
          onPress={() => {console.log('what you are searching for ')}} 
          />
         
@@ -121,14 +120,3 @@ const styles = StyleSheet.create({
 });
 
 export default Home;
-function ExploreWitHookExamples() {
-  const goTo = useTabNavigation();
-  const index = useTabIndex();
-  return (
-    <View style={{ flex: 1 }}>
-      <Title>Explore</Title>
-      <Paragraph>Index: {index}</Paragraph>
-      <Button onPress={() => goTo(1)}>Go to Flights</Button>
-    </View>
-  );
-}
